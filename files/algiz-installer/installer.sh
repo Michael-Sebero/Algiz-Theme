@@ -37,4 +37,5 @@ reset-permissions
 cd /
 rm -rf /home/algiz-files/
 echo -e "\e[1mAlgiz Theme dotfiles have been successfully extracted\e[0m"
+reboot
 '
