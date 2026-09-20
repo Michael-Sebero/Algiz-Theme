@@ -12,7 +12,7 @@ read -p "Enter your choice (1-2): " choice
 ### INSTALL NEEDED XFCE PACKAGES ###
 
 if pacman -Qq | grep -q "^thunar$"; then
-    pacman -Sy --noconfirm mugshot xfce4-panel-profiles lightdm-gtk-greeter-settings
+    pacman -Sy --noconfirm mugshot xfce4-panel-profiles lightdm-gtk-greeter-settings artix-dark-theme
 
     ### CLONE ALGIZ THEME FILES ###
 
