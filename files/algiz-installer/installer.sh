@@ -43,6 +43,12 @@ if pacman -Qq | grep -q "^thunar$"; then
     # RESET PERMISSIONS
     reset-permissions
 
+    # APPLY THEME TO CURRENT SESSION
+    xfsettingsd -r
+    xfwm4 --replace &
+    xfce4-panel -r
+    xfdesktop --reload
+
     # CLEANUP
     cd /
     rm -rf /home/algiz-files/
