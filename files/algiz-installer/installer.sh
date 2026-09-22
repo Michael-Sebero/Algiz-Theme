@@ -49,6 +49,7 @@ if pacman -Qq | grep -q "^thunar$"; then
 fi
 
 ### CLEANUP ###
+
 cd /
 rm -rf /home/algiz-files/
 echo -e "\e[1mAlgiz Theme dotfiles have been successfully extracted\e[0m"
