@@ -19,7 +19,7 @@ cd /home/algiz-files/files/algiz-packages/
 ### REMOVE OLD XFCE DIRECTORIES ###
 
 echo -e "\e[1mRemoving old xfce directories from /home/$USER...\e[0m"
-find /home/$USER -maxdepth 1 -type d -iname "*xfce*" -exec rm -rf {} +
+find /home/$USER -maxdepth 1 -type d -iname "*xfce*" -exec rm -rf {} + || true
 
 # DESKTOP SELECTION
 if [ "$choice" = "1" ]; then
