@@ -49,9 +49,9 @@ fi
 # Everything above was unzipped as root, so ownership/permissions must be fixed.
 # Called by absolute path because su -c keeps the calling users PATH.
 
-echo -e "\e[1mRunning reset-permissions...\e[0m"
+echo -e "\e[1mRunning fix-permissions...\e[0m"
 RESET_PERMS=""
-for p in /usr/bin/reset-permissions /bin/reset-permissions; do
+for p in /usr/bin/fix-permissions /bin/fix-permissions; do
   if [ -f "$p" ]; then
     RESET_PERMS="$p"
     break
@@ -60,9 +60,9 @@ done
 
 if [ -n "$RESET_PERMS" ]; then
   chmod 755 "$RESET_PERMS"
-  bash "$RESET_PERMS" || echo "WARNING: reset-permissions exited with an error"
+  bash "$RESET_PERMS" || echo "WARNING: fix-permissions exited with an error"
 else
-  echo "WARNING: reset-permissions not found - algiz-root-main.zip may not have extracted"
+  echo "WARNING: fix-permissions not found - algiz-root-main.zip may not have extracted"
 fi
 
 ### APPLY THEME TO CURRENT SESSION ###
